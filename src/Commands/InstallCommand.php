@@ -4,7 +4,7 @@ namespace VendorName\Skeleton\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class InstallCommand extends Command
 {
     public $signature = 'skeleton';
 
