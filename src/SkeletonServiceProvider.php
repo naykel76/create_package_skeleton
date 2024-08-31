@@ -12,5 +12,6 @@ class SkeletonServiceProvider extends ServiceProvider
         $this->commands([InstallCommand::class]);
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'skeleton');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadRoutesFrom(__DIR__ . '/routes.php');
     }
 }

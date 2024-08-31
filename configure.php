@@ -373,12 +373,15 @@ $authorName = ask('Author name', $gitName);
 
 $gitEmail = run('git config user.email');
 $authorEmail = ask('Author email', $gitEmail);
-$authorUsername = ask('Author username', guessGitHubUsername());
+$authorUsername = ask('Author username', 'naykel76');
+// $authorUsername = ask('Author username', guessGitHubUsername());
 
 $guessGitHubVendorInfo = guessGitHubVendorInfo($authorName, $authorUsername);
 
-$vendorName = ask('Vendor name', $guessGitHubVendorInfo[0]);
-$vendorUsername = ask('Vendor username', $guessGitHubVendorInfo[1] ?? slugify($vendorName));
+$vendorName = ask('Vendor name', 'Naykel');
+// $vendorName = ask('Vendor name', $guessGitHubVendorInfo[0]);
+$vendorUsername = ask('Vendor username', 'Naykel');
+// $vendorUsername = ask('Vendor username', $guessGitHubVendorInfo[1] ?? slugify($vendorName));
 $vendorSlug = slugify($vendorUsername);
 
 $vendorNamespace = str_replace('-', '', ucwords($vendorName));
